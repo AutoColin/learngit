@@ -2,6 +2,39 @@
 #include <string.h>
 #include <stdlib.h>
 
+void ByteToStr(char* src, int8_t* dest, int32_t len)
+{
+    int32_t i = 0;
+
+    for(i = 0; i < len; i++)
+    {
+        sprintf(dest + i * 2, "%0.2x", src[i]);
+    }
+
+    return;
+}
+
+int32_t StrToByte(int8_t* src, char* dest)
+{
+    int32_t i = strlen(src), j = 0, count = 0;
+
+    int8_t tmp[2];
+    unsigned int bytes;
+
+    for(j = 0; j < i; j++)
+    {
+        if(0 == j % 2)
+        {
+            sprintf(tmp, "%c%c", src[j], src[j + 1]);
+            sscanf(tmp, "%x", &bytes);
+            dest[count] = bytes;
+            count++;
+        }
+    }
+
+    return count;
+}
+
 int main()
 {
     unsigned char tmp[2];
