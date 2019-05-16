@@ -4,7 +4,7 @@
 int main(void)
 {
     printf("begin cycle:\n");
-    int8_t signal;
+    int signal;
     while(1)
     {  
         //printf("input signal:");
