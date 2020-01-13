@@ -1,5 +1,5 @@
 #PythonDraw.pr
-import tt
+import turtle as tt
 tt.setup(650, 350, 200, 200)
 tt.penup()
 tt.fd(-250)
