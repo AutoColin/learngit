@@ -8,8 +8,9 @@ def koch(size, n):
             tt.left(angle)
             koch(size / 3, n - 1)
 def main():
-    length, level = eval(input())
+    length, level, sp = eval(input())
     tt.setup(600, 600) 
+    tt.speed(sp)
     tt.penup()
     tt.goto(-200, 200)
     tt.pendown()
