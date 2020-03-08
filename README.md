@@ -1,3 +1,1 @@
-# learngit
-##  forget how to push
-### so test it
+This is just a repository for personal recording in study and work!
